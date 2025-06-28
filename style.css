@@ -31,7 +31,7 @@ body {
 }
 
 .logo span {
-  color: #43cea2;
+  color: #1e88e5;
 }
 
 .nav {
@@ -190,11 +190,57 @@ body {
   color: #333;
 }
 
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #292929;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s, background 0.3s;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+.contact-icon i {
+  font-size: 1.1rem;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+  background: #1e88e5;
+}
+
+/* Footer */
 .footer {
-  background: #0d1b2a;
+  background: #1e1e1e;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer p {
+  margin-top: 10px;
 }
 
 .about-section-content {
@@ -218,5 +264,15 @@ body {
   .tag {
     font-size: 0.9rem;
     padding: 8px 15px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-icon {
+    width: 90%;
+    justify-content: center;
   }
 }
