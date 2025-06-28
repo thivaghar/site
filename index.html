@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THIVAGHAR K B | DATA ANALYST</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">THIVAGHAR <span>K B</span></h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="home-section">
+    <div class="container home-content">
+      <div class="home-text">
+        <h2>Hi, I'm <span class="highlight">THIVAGHAR</span></h2>
+        <p class="lead">I am a <span id="typed-role"></span></p>
+        <div class="cta-buttons">
+          <a href="THIVAGHAR-K-B (3).pdf" class="btn secondary" target="_blank">View Resume</a>
+          <a href="THIVAGHAR-K-B (3).pdf" class="btn primary" download>Download CV</a>
+        </div>
+      </div>
+      <div class="home-image">
+        <img src="passport size.jpg" alt="THIVAGHAR Photo">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container about-section-content">
+      <div class="about-text">
+        <h2>About Me</h2>
+       <p>Hi! I'm Thivaghar, a Computer Science and Engineering student from Kongu Engineering College. I have recently completed my degree and I'm excited to start my journey in the tech industry.
+  I enjoy coding and learning new things. My favorite areas are <strong>Python, SQL, Cloud, and web development</strong>.
+</p>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="grid">
+        <span class="tag"><i class="fab fa-python"></i> Python</span>
+        <span class="tag"><i class="fas fa-database"></i> MySQL</span>
+        <span class="tag"><i class="fas fa-pencil-ruler"></i> UI/UX</span>
+        <span class="tag"><i class="fab fa-figma"></i> Figma</span>
+        <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+        <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+        <span class="tag"><i class="fab fa-js-square"></i> JavaScript</span>
+        <span class="tag"><i class="fab fa-aws"></i> AWS</span>
+        <span class="tag"><i class="fas fa-chart-bar"></i> Power BI (Basic)</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="grid projects">
+      
+      <div class="card">
+        <img src="ott.png" alt="Netflix Dataset Cleaning Project">
+        <h3>Netflix Dataset Cleaning</h3>
+        <p>Cleaned and preprocessed Netflix data using Python and Pandas. Handled missing values, corrected data formatting, and standardized column names for EDA and visualization.</p>
+        <a href="https://github.com/thivaghar" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <img src="ott.png" alt="OTT Platforms Dashboard">
+        <h3>OTT Platforms Analysis Dashboard</h3>
+        <p>Created an interactive dashboard in Power BI and Python to analyze Netflix, Amazon Prime, and Disney+ Hotstar content. Included slicers, pie charts, and filters.</p>
+        <a href="https://github.com/thivaghar" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <img src="hr.png" alt="HR Analytics Dashboard">
+        <h3>HR Analytics Dashboard</h3>
+        <p>Developed a dynamic Power BI dashboard to monitor headcount, salary, leave balances, and gender distribution. Included filters by job role and qualification.</p>
+        <a href="https://github.com/thivaghar" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <img src="service-finder.jpg" alt="Service Finder UI/UX App">
+        <h3>Service Finder Application</h3>
+        <p>Designed a UI/UX prototype in Figma to connect users with skilled workers (electricians, AC mechanics, etc.). Focused on booking flow, listings, and user experience.</p>
+        <a href="https://github.com/thivaghar" target="_blank">View on GitHub</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><i class="fas fa-envelope"></i> Thivagharkb@gmail.com</li>
+        <li><i class="fas fa-phone"></i> +91 9655918053</li>
+        <li><i class="fas fa-map-marker-alt"></i> Trichy, Tamil Nadu, India</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 thivaghar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('.nav a');
+      const roles = ["DATA ANALYST", "UI/UX Designer", "Problem Solver"];
+      let index = 0, i = 0;
+
+      function setActiveLink() {
+        const fromTop = window.scrollY + 100;
+        navLinks.forEach(link => {
+          const section = document.querySelector(link.getAttribute('href'));
+          if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+
+      setActiveLink();
+      window.addEventListener('scroll', setActiveLink);
+
+      function typeRole() {
+        const el = document.getElementById("typed-role");
+        if (!el) return;
+
+        if (i < roles[index].length) {
+          el.innerHTML += roles[index][i];
+          i++;
+          setTimeout(typeRole, 100);
+        } else {
+          setTimeout(() => {
+            el.innerHTML = "";
+            i = 0;
+            index = (index + 1) % roles.length;
+            typeRole();
+          }, 1500);
+        }
+      }
+
+      typeRole();
+    });
+  </script>
+</body>
+</html>
